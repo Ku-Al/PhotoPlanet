@@ -69,12 +69,19 @@
 	<div class="row-fluid">
 		<div class="span12">
 			<form>
-				<fieldset>
-					 <legend>Обратная связь</legend> <label>Сообщение</label><input type="text"><br /> 
-					 <label>Ваш email на который будет выслан ответ</label><input type="text1"><br /> 
-					<span class="help-block">Example block-levev help text here.</span>
- 					<button type="submit" class="btn">Отправить</button>
-				</fieldset>
+				<legend>Обратная связь</legend> 
+				<label class="control-label" for="inputEmail">Ваш Email</label>
+					<div class="controls">
+						<input type="text" id="inputEmail" />
+					</div>
+				</div>
+				<div class="control-group">
+					 <label class="control-label" for="inputMes">Сообщение</label>
+					<div class="controls">
+						<input type="password" id="inputMes" />
+					</div>
+				</div>
+ 				<button type="submit" class="btn">Отправить</button>
 			</form>
 		</div>
 	</div>
