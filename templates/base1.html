@@ -1,0 +1,222 @@
+{% load staticfiles %}
+<!DOCTYPE html> <!-- saved from url=(0042)http://bootstrap-ru.com/examples/hero.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PhotoPlanet - All Photos</title>
+    
+    <!-- Le styles -->
+    {% block css %}
+     <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+     <link rel="stylesheet" href="{% static "css/bootstrap-responsive.css" %}">
+
+    {% endblock %}
+
+    <!-- <link href="./css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+
+    </style> --!>
+	<!-- <script src="js/vendor/custom.modernizr.js"></script> --!>
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons 
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://bootstrap-ru.com/assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://bootstrap-ru.com/assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://bootstrap-ru.com/assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="http://bootstrap-ru.com/assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="http://bootstrap-ru.com/assets/ico/favicon.png">
+  -->
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">PhotoPlanet</a>
+          <div class="nav-collapse pull-right">
+            <ul class="nav">
+	      <li class="active"><a href="{% url 'day' %}">Today</a></li>
+              <li><a href="{% url 'all' %}">All Foto</a></li>
+              <li><a href="{% url 'about' %}">About</a></li>  
+              <li><a href="{% url 'login' %}">Login</a></li>
+            </ul>
+	   </div>
+              </li>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+    <div class="row">
+	<div class="span4">...</div>
+	<div class="span4">...</div>
+  	<div class="span4">
+	  <form class="navbar-search pull-left">
+            <input type="text" class="search-query" placeholder="Search">
+          </form>
+	</div>	
+    </div>	
+
+
+  <div class="row">
+
+    <!-- Main Blog Content -->
+    {% block content %}
+    {% endblock %}
+
+     <div class="pagination">
+       <ul>
+        <li><a href="#">Prev</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">Next</a></li>
+      </ul>
+     </div>
+  </div>
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span3">
+        <img src="/img/tim.jpg" alt="avatar" />
+            <h6><a href="#">@anna_timoshenko</a></h6>
+	</div>
+        <div class="span5">
+	<img src="/img/tim.jpg" /><br />
+            <h6 class="show-for-small"><a href="#">@anna_timoshenko</a></h6>
+            <div class="time"><a href="photo.html">10:10</a></div>
+
+        </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="index.html#">View details »</a></p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="span3">
+        <img src="/img/tim.jpg" alt="avatar" />
+            <h6><a href="#">@anna_timoshenko</a></h6>
+	</div>
+        <div class="span5">
+	<img src="/img/tim.jpg" /><br />
+            <h6 class="show-for-small"><a href="#">@anna_timoshenko</a></h6>
+            <div class="time"><a href="photo.html">10:10</a></div>
+
+        </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="index.html#">View details »</a></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span3">
+        <img src="/img/tim.jpg" alt="avatar" />
+            <h6><a href="#">@anna_timoshenko</a></h6>
+	</div>
+        <div class="span5">
+	<img src="/img/tim.jpg" /><br />
+            <h6 class="show-for-small"><a href="#">@anna_timoshenko</a></h6>
+            <div class="time"><a href="photo.html">10:10</a></div>
+
+        </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="index.html#">View details »</a></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span3">
+        <img src="/img/tim.jpg" alt="avatar" />
+            <h6><a href="#">@anna_timoshenko</a></h6>
+	</div>
+        <div class="span5">
+	<img src="/img/tim.jpg" /><br />
+            <h6 class="show-for-small"><a href="#">@anna_timoshenko</a></h6>
+            <div class="time"><a href="photo.html">10:10</a></div>
+
+        </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="index.html#">View details »</a></p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span3">
+        <img src="/img/tim.jpg" alt="avatar" />
+            <h6><a href="#">@anna_timoshenko</a></h6>
+	</div>
+        <div class="span5">
+	<img src="/img/tim.jpg" /><br />
+            <h6 class="show-for-small"><a href="#">@anna_timoshenko</a></h6>
+            <div class="time"><a href="photo.html">10:10</a></div>
+
+        </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="index.html#">View details »</a></p>
+        </div>
+      </div>
+
+
+
+      <hr>
+
+      <footer>
+        <div class="container">
+        <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
+        </div>
+      </footer>
+<!--
+      <footer>
+        <p>© Company 2012</p>
+      </footer>
+-->
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./index_files/jquery.js"></script>
+    <script src="./index_files/bootstrap-transition.js"></script>
+    <script src="./index_files/bootstrap-alert.js"></script>
+    <script src="./index_files/bootstrap-modal.js"></script>
+    <script src="./index_files/bootstrap-dropdown.js"></script>
+    <script src="./index_files/bootstrap-scrollspy.js"></script>
+    <script src="./index_files/bootstrap-tab.js"></script>
+    <script src="./index_files/bootstrap-tooltip.js"></script>
+    <script src="./index_files/bootstrap-popover.js"></script>
+    <script src="./index_files/bootstrap-button.js"></script>
+    <script src="./index_files/bootstrap-collapse.js"></script>
+    <script src="./index_files/bootstrap-carousel.js"></script>
+    <script src="./index_files/bootstrap-typeahead.js"></script>
+
+  
+</body></html>
